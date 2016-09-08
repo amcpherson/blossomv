@@ -1,0 +1,21 @@
+package:
+  name: blossomv
+  version: '2.04'
+
+source:
+  git_url: https://dranew@bitbucket.org/dranew/blossomv.git
+  git_rev: v2.04
+
+requirements:
+  build:
+    - python
+    - cython
+
+  run:
+    - python
+
+about:
+  home: http://bitbucket.org/dranew/blossomv
+  summary: 'Python wrapper for the Blossom V algorithm'
+  license: 'The code above is licensed for research purposes only. Commercial licensing of Blossom V is available through the UCL Business e-licensing website.'
+
