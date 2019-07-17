@@ -1,7 +1,7 @@
 import os
 import sys
 import tarfile
-import urllib
+import urllib.request
 from setuptools import setup, find_packages, Extension
 
 
@@ -13,7 +13,7 @@ blossom5_dir = os.path.join(external_dir, 'blossom5-v2.04.src')
 blossom5_bin = os.path.join(blossom5_dir, 'blossom5')
 
 if not os.path.exists(blossom5_tar_gz):
-    urllib.urlretrieve(blossom5_url, blossom5_tar_gz)
+    urllib.request.urlretrieve(blossom5_url, blossom5_tar_gz)
 
 if not os.path.exists(os.path.join(blossom5_dir, 'README.TXT')):
     tar = tarfile.open(blossom5_tar_gz)
