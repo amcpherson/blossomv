@@ -1,15 +1,15 @@
 dist: xenial
 language: python
 python:
-  - "2.7"
-  - "3.5"
-  - "3.6"
-  - "3.7"
+- '2.7'
+- '3.5'
+- '3.6'
+- '3.7'
 deploy:
   provider: pypi
   user: amcpherson
   password:
-    secure: xQ8du9nR9PP9ChGzOfKEFsQGKZQOXaH54oowVFvHstcmR5joor05oO+yGyfwHzNeEZnU8XCnFNTAOv4/UtM4mHwARDMIT63n8TvuhQF+j20vKUaT+DK2N8zDsahVdR0tQiTo0G6hmrCUm4SS1ZkQkW2WMBx3NKF2gyasD2ic46/S3a6D6Oh5vqGHBQVhQAXAGAGEMo0wn25M9wgl98k1OLpEuVegQ7O7YUu7OWjKL+TXamMCmKP7CycHF3mepZsKycpTfeRcUKtrOYN1ccM9/uGsp1JXYn7zHAu5uEdhxhPUWaQ50JRd/8TyQMaGEZHqL7st5gEs9d6h+njUiPtoBv35ZVmbedEaIL64LgjXnfEmrfMUWXT1L5GgCNGYisCe5iBw8AtKvtgVRMmCTsc33B3/UDe4dVQFlD8CDRrU1KQP9SdfFjOJFWWDhItWEUVW0fExiIBy4ziCbM5ZmdccsjSEAkpHOjFpwlxYTrrjL8x6cRTfo/3NFT6AlZRrR+DM7Iiq5Q/bjSsF6MRhLlGBfOdr2bLp2x7Pw+yLxKB73u/JH9soCUuRN4zg4LPzEcdavQm6IShz7PuyphRlkzs8D+xnvKSLTh8vcu9MsdtgN/y+4AoHQ9fawVXUUEALBnhpPbjJdYuX0CJJ8qrZutp7qWOOQXBwFGDtGJ7753gblrE=
+    secure: XGQ5I0JMdk++M+uUnYa76HjOfOw1GXgIpVQz6RzIDSNS+GtdxA371uNh43rpwrxOPsMxCb5ckoRCWAzNBUIu6mLslpmdoNesgO7P46ZxAhZjhlRpXIULBvCazc2asN3O7nH5qcAYpLS1cKXyTD/BBoamoafC1IsFGHKspxi2es0w9gcWyA/+jyoPVs0bYcYyyuZi0vE33l8LYFDrdH1lwpDE8s00SNpDb/IzPy4MO7E4Zcq/EhQJxQ6XE+KUv8d7f6RmnAEUoe4uj46SnLfS4a9qdtw4L7hZL6hN8PMZkXzw1DXTOgKGa1wqOvwHxcO++BrYhlXkaEjUG9DDBx/EKxLvg5frCLrvVg4adg6I2TyZr06Ge2I/W6nKqdBwxM4qV0vluzlejuefB4x4WWl03ZuVII37HSM/R0bVCMicaa+BbszPUvwhxw08kRH7dy1JPR/lq+hTPvrxsEyLvjJvHc1wk1ZjNpqvsPwqV4EYSQ8xxyOJNMt8opHfNQnM6E/JUdAQ2bS+ID40gel2jUnJUk3R/IiZeXu7qBLQJlPobfcfBTSHT2XrNkHl/AUhEm9MtqrlZGDBVDcnf/PDLAHSp+VnR5fZccp/dXWZRcPjCGFgnBUOYZPO2+yKfpkxvOvFvLinh/R2mCYqnwH57p6p+ONn8Y1Da1XgG1knDHaNp7Q=
   on:
     tags: true
 script:
