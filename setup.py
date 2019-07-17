@@ -76,7 +76,5 @@ setup(
     ext_modules=extensions,
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: Research purposes only",
-        "Operating System :: Linux",
     ],
 )
