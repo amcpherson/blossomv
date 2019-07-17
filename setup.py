@@ -65,7 +65,7 @@ if use_cython:
 
 setup(
     name='blossomv',
-    version='v2.04',
+    version='v2.04_r2',
     author="Andrew McPherson",
     author_email="andrew.mcpherson@gmail.com",
     description="A wrapper for the BlossomV code",
