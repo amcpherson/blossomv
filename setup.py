@@ -62,6 +62,9 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/amcpherson/blossomv",
     packages=find_packages(),
+    setup_requires=[
+        'cython>=0.x',
+    ],
     ext_modules=cythonize(extensions),
     classifiers=[
         "Programming Language :: Python :: 3",
