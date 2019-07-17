@@ -3,7 +3,6 @@ import sys
 import tarfile
 import urllib
 from setuptools import setup, find_packages, Extension
-from Cython.Build import cythonize
 
 
 external_dir = os.path.abspath('src/external')
@@ -40,17 +39,29 @@ libraries = []
 if 'linux' in sys.platform:
     libraries.append('rt')
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+if not os.path.exists('blossomv/blossomv.cpp'):
+    ext = '.pyx'
+    use_cython = True
+
+else:
+    ext = '.cpp'
+    use_cython = False
+
 extensions = [
     Extension(
         name='blossomv.blossomv',
-        sources=['blossomv/blossomv.pyx'] + blossom_source,
+        sources=['blossomv/blossomv' + ext] + blossom_source,
         include_dirs=[blossom_directory],
         libraries=libraries,
     ),
 ]
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+if use_cython:
+    from Cython.Build import cythonize
+    extensions = cythonize(extensions)
 
 setup(
     name='blossomv',
@@ -62,10 +73,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/amcpherson/blossomv",
     packages=find_packages(),
-    setup_requires=[
-        'cython>=0.x',
-    ],
-    ext_modules=cythonize(extensions),
+    ext_modules=extensions,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: Research purposes only",
